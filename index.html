@@ -11,32 +11,35 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream: #F5F0E8;
-      --ink: #1A1714;
-      --ink-soft: #3D3830;
-      --ink-muted: #7A7268;
-      --teal: #1D9E75;
-      --teal-light: #E1F5EE;
-      --teal-dark: #0F6E56;
-      --purple: #7F77DD;
-      --purple-light: #EEEDFE;
-      --purple-dark: #534AB7;
-      --coral: #D85A30;
-      --coral-light: #FAECE7;
-      --coral-dark: #993C1D;
-      --blue: #378ADD;
-      --blue-light: #E6F1FB;
-      --blue-dark: #185FA5;
-      --amber: #BA7517;
-      --amber-light: #FAEEDA;
-      --border: rgba(26,23,20,0.1);
-      --border-soft: rgba(26,23,20,0.06);
+      --bg:        #0E0E10;
+      --surface:   #1A1A1E;
+      --surface-2: #222228;
+      --surface-3: #2C2C34;
+      --ink:       #F0EDE8;
+      --ink-soft:  #B8B3AC;
+      --ink-muted: #6E6A64;
+      --teal:      #1FBF88;
+      --teal-light: rgba(31,191,136,0.12);
+      --teal-dark:  #0F7A57;
+      --purple:     #8B82F0;
+      --purple-light: rgba(139,130,240,0.12);
+      --purple-dark:  #5A52C2;
+      --coral:      #E8673A;
+      --coral-light: rgba(232,103,58,0.12);
+      --coral-dark:  #A84020;
+      --blue:       #4D9FE8;
+      --blue-light: rgba(77,159,232,0.12);
+      --blue-dark:  #1E62AA;
+      --amber:      #D4901E;
+      --amber-light: rgba(212,144,30,0.12);
+      --border:     rgba(255,255,255,0.07);
+      --border-soft: rgba(255,255,255,0.04);
       --radius: 12px;
       --radius-sm: 6px;
     }
 
     body {
-      background: var(--cream);
+      background: var(--bg);
       color: var(--ink);
       font-family: 'DM Sans', sans-serif;
       font-size: 15px;
@@ -51,10 +54,11 @@
       display: flex;
       align-items: baseline;
       gap: 1rem;
-      background: var(--cream);
+      background: var(--bg);
       position: sticky;
       top: 0;
       z-index: 10;
+      backdrop-filter: blur(12px);
     }
 
     .logo {
@@ -96,7 +100,8 @@
 
     /* ── Tagline block ── */
     .tagline-block {
-      background: var(--ink);
+      background: var(--surface-2);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 2.5rem 3rem;
       position: relative;
@@ -106,37 +111,53 @@
     .tagline-block::before {
       content: '';
       position: absolute;
-      top: -40px;
-      right: -40px;
-      width: 200px;
-      height: 200px;
+      top: -60px;
+      right: -60px;
+      width: 240px;
+      height: 240px;
       border-radius: 50%;
       background: var(--teal);
-      opacity: 0.08;
+      opacity: 0.06;
+      filter: blur(40px);
+    }
+
+    .tagline-block::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 10%;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: var(--purple);
+      opacity: 0.05;
+      filter: blur(40px);
     }
 
     .tagline-main {
       font-family: 'DM Serif Display', serif;
       font-size: 2rem;
-      color: var(--cream);
+      color: var(--ink);
       line-height: 1.25;
       margin-bottom: 0.75rem;
+      position: relative;
     }
 
     .tagline-alt {
       font-size: 13px;
-      color: rgba(245,240,232,0.45);
+      color: var(--ink-muted);
       font-weight: 300;
+      position: relative;
     }
 
     .tagline-alt strong {
-      color: rgba(245,240,232,0.65);
+      color: var(--ink-soft);
       font-weight: 400;
     }
 
     /* ── Cards ── */
     .card {
-      background: white;
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 1.5rem;
@@ -147,7 +168,7 @@
       border-radius: 0 var(--radius) var(--radius) 0;
     }
 
-    .card-teal  { border-left-color: var(--teal); }
+    .card-teal   { border-left-color: var(--teal); }
     .card-purple { border-left-color: var(--purple); }
     .card-coral  { border-left-color: var(--coral); }
     .card-blue   { border-left-color: var(--blue); }
@@ -162,10 +183,10 @@
       margin-bottom: 0.75rem;
     }
 
-    .badge-teal   { background: var(--teal-light);   color: var(--teal-dark); }
-    .badge-purple { background: var(--purple-light); color: var(--purple-dark); }
-    .badge-coral  { background: var(--coral-light);  color: var(--coral-dark); }
-    .badge-blue   { background: var(--blue-light);   color: var(--blue-dark); }
+    .badge-teal   { background: var(--teal-light);   color: var(--teal); }
+    .badge-purple { background: var(--purple-light); color: var(--purple); }
+    .badge-coral  { background: var(--coral-light);  color: var(--coral); }
+    .badge-blue   { background: var(--blue-light);   color: var(--blue); }
     .badge-amber  { background: var(--amber-light);  color: var(--amber); }
 
     .card-title {
@@ -187,10 +208,16 @@
 
     /* ── Value pills ── */
     .value-pill {
-      background: white;
+      background: var(--surface);
       border: 1px solid var(--border-soft);
       border-radius: var(--radius-sm);
       padding: 1rem 1.1rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .value-pill:hover {
+      background: var(--surface-2);
+      border-color: var(--border);
     }
 
     .value-name {
@@ -208,16 +235,33 @@
 
     /* ── Manifesto ── */
     .manifesto {
-      background: white;
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 2rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .manifesto::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: var(--teal);
+      opacity: 0.04;
+      filter: blur(60px);
+      pointer-events: none;
     }
 
     .manifesto-text {
       font-size: 15px;
       color: var(--ink-soft);
       line-height: 1.9;
+      position: relative;
     }
 
     .manifesto-text em {
@@ -227,8 +271,6 @@
       font-size: 16px;
     }
 
-    .manifesto-text br + br { display: block; content: ''; margin-top: 0.5rem; }
-
     /* ── Footer ── */
     footer {
       border-top: 1px solid var(--border);
@@ -236,6 +278,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: var(--bg);
     }
 
     .footer-text {
@@ -251,6 +294,7 @@
       display: inline-block;
       margin-right: 6px;
       vertical-align: middle;
+      box-shadow: 0 0 8px var(--teal);
     }
 
     /* ── Divider ── */
