@@ -1,0 +1,132 @@
+<style>
+  .section { margin-bottom: 2rem; }
+  .label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-tertiary); margin-bottom: 6px; }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem 1.5rem; }
+  .card-accent-teal { border-left: 3px solid #1D9E75; border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0; }
+  .card-accent-purple { border-left: 3px solid #7F77DD; border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0; }
+  .card-accent-coral { border-left: 3px solid #D85A30; border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0; }
+  .card-accent-blue { border-left: 3px solid #378ADD; border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0; }
+  .card-accent-amber { border-left: 3px solid #BA7517; border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0; }
+  .title { font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 8px; }
+  .body { font-size: 14px; color: var(--color-text-secondary); line-height: 1.7; margin: 0; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .value-pill { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 14px; }
+  .value-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
+  .value-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; margin: 0; }
+  .tagline-block { background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 1.5rem 1.75rem; text-align: center; }
+  .tagline-text { font-size: 20px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 6px; }
+  .tagline-sub { font-size: 13px; color: var(--color-text-tertiary); margin: 0; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 0 0 2rem; }
+  .manifesto-body { font-size: 14px; color: var(--color-text-secondary); line-height: 1.9; margin: 0; }
+  .manifesto-body em { color: var(--color-text-primary); font-style: normal; font-weight: 500; }
+  .badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); margin-bottom: 10px; }
+  .badge-teal { background: #E1F5EE; color: #0F6E56; }
+  .badge-purple { background: #EEEDFE; color: #534AB7; }
+  .badge-coral { background: #FAECE7; color: #993C1D; }
+  .badge-blue { background: #E6F1FB; color: #185FA5; }
+  .badge-amber { background: #FAEEDA; color: #854F0B; }
+</style>
+
+<div style="padding: 1.5rem 0;">
+
+  <div class="section">
+    <div class="label">Tagline</div>
+    <div class="tagline-block">
+      <p class="tagline-text">Sua marca começa pelo que as pessoas vestem.</p>
+      <p class="tagline-sub">Alternativa: "Do projeto à entrega, a imagem que a sua marca merece."</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section grid-2">
+    <div>
+      <div class="label">Missão</div>
+      <div class="card card-accent-teal">
+        <div class="badge badge-teal">O que fazemos e para quem</div>
+        <p class="body">Desenvolver projetos de uniformização corporativa que traduzem a identidade e a cultura de cada empresa em peças funcionais e com design de alto nível — gerenciando todo o processo, da concepção à reposição, para que o cliente foque no que é essencial para o seu negócio.</p>
+      </div>
+    </div>
+    <div>
+      <div class="label">Visão</div>
+      <div class="card card-accent-purple">
+        <div class="badge badge-purple">Onde queremos chegar</div>
+        <p class="body">Ser reconhecida como a consultoria de referência em uniformização corporativa no Brasil — a escolha natural de grandes marcas que entendem que a imagem dos colaboradores é um ativo estratégico da empresa.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <div class="label">Valores — como a TS Studio age, não o que ela aspira</div>
+    <div class="grid-3">
+      <div class="value-pill">
+        <p class="value-name">Rigor criativo</p>
+        <p class="value-desc">Criatividade com propósito. Cada escolha de design precisa ter razão de ser — funcional, cultural e estética.</p>
+      </div>
+      <div class="value-pill">
+        <p class="value-name">Parceria real</p>
+        <p class="value-desc">Não somos fornecedores. Assumimos a complexidade do projeto junto com o cliente, como um braço da equipe interna.</p>
+      </div>
+      <div class="value-pill">
+        <p class="value-name">Transparência operacional</p>
+        <p class="value-desc">Processos claros, prazos realistas, comunicação direta. Mesmo quando o problema é de terceiros.</p>
+      </div>
+      <div class="value-pill">
+        <p class="value-name">Inovação aplicada</p>
+        <p class="value-desc">Tecnologia 3D, IA e plataformas digitais são ferramentas a serviço do resultado — não vitrine.</p>
+      </div>
+      <div class="value-pill">
+        <p class="value-name">Respeito pela escala humana</p>
+        <p class="value-desc">Uniformes vestem pessoas. O bem-estar, a autoestima e a diversidade corporal dos colaboradores guiam nossas decisões.</p>
+      </div>
+      <div class="value-pill">
+        <p class="value-name">Produção consciente</p>
+        <p class="value-desc">Sustentabilidade não é argumento de venda. É uma exigência interna que orienta escolha de materiais, logística e fornecedores.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <div class="label">Posicionamento</div>
+    <div class="card card-accent-blue">
+      <div class="badge badge-blue">Como a TS Studio quer ser percebida no mercado</div>
+      <p class="body">Para empresas com operação de médio e grande porte que precisam uniformizar centenas de colaboradores sem abrir mão de design, qualidade e previsibilidade de processo — o TS Studio é a consultoria que une direção criativa de alto nível com gestão completa de produção e logística. Diferente de fornecedores tradicionais de uniformes, o TS Studio entrega um projeto de imagem corporativa, não apenas uma peça de roupa.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <div class="label">Proposta de valor</div>
+    <div class="card card-accent-coral">
+      <div class="badge badge-coral">O que entregamos que ninguém mais entrega do mesmo jeito</div>
+      <p class="body">O TS Studio é o único ponto de contato que uma empresa precisa para transformar a imagem dos seus colaboradores em vantagem competitiva. Cuidamos do design, da modelagem, dos fornecedores, da aprovação com tecnologia 3D, da produção e da reposição futura. O cliente aprova, o resto fica com a gente.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <div class="label">Manifesto</div>
+    <div class="card">
+      <p class="manifesto-body">
+        Um uniforme mal planejado não é só um problema de estética.<br>
+        É um colaborador desconfortável. É uma marca que comunica desleixo. É um processo interno que consome tempo, energia e dinheiro sem ninguém assumir a responsabilidade.<br><br>
+        <em>A gente assume.</em><br><br>
+        O TS Studio nasceu da convicção de que uniformização corporativa é, antes de tudo, um projeto de identidade. Não produzimos peças — construímos a imagem que os seus colaboradores carregam todos os dias ao entrar no trabalho, ao atender um cliente, ao representar a sua marca.<br><br>
+        Fazemos isso com método, com tecnologia e com décadas de experiência em design B2B. Mas sobretudo com responsabilidade: <em>nos tornamos o braço que cuida do que o seu time não tem tempo de cuidar</em>.<br><br>
+        Acreditamos que um uniforme bem feito muda a postura de quem veste e a percepção de quem vê.<br>
+        Que design funcional e criatividade não se excluem — se somam.<br>
+        Que sustentabilidade não é diferencial, é obrigação.<br><br>
+        <em>Sua marca começa pelo que as pessoas vestem.</em><br>
+        A gente cuida disso.
+      </p>
+    </div>
+  </div>
+
+</div>
